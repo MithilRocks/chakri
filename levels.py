@@ -1,7 +1,7 @@
 from nsepy import get_history
 from datetime import date, datetime, timedelta
 import pandas as pd
-import pprint
+import pprint 
 
 class Levels:
 
