@@ -1,7 +1,6 @@
 from nsepy import get_history
 from datetime import date, datetime, timedelta
 import pandas as pd
-import pprint 
 
 class Levels:
 
@@ -32,7 +31,7 @@ class Levels:
         j = 1
         k = 2
         final_data = {}
-        for single_date in pd.bdate_range(date(2018, 5, 10), date(2018, 5, 17)):
+        for single_date in pd.bdate_range(self.start_date, self.end_date):
             final_data[single_date.strftime("%Y-%m-%d")] = {}
             final_data[single_date.strftime("%Y-%m-%d")]["h2"] = str(self.averages(high[j:j+2]))
             final_data[single_date.strftime("%Y-%m-%d")]["h3"] = str(self.averages(high[i:i+3]))
